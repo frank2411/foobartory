@@ -14,9 +14,14 @@ setup(
     description="Little foobartory game",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://gitlab.digeiz.com/pleiades/livedigeiz",
+    url="https://github.com/frank2411/foobartory",
     python_requires=">=3.8",
     package_dir={"foobartory": "src"},
     packages=setuptools.find_packages(exclude=["tests"]),
     install_requires=requirements,
+    entry_points={
+        'console_scripts': [
+            'foobartorize = src:do_foobartorize',
+        ]
+    }
 )
