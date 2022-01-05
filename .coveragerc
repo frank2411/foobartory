@@ -1,0 +1,2 @@
+[run]
+omit = wsgi.py, .tox/*, tests/*, setup.py, *__init__.py, */config.py

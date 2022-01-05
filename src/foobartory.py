@@ -15,9 +15,9 @@ class Foobartory:
 
     def setup_robots(self):
         print("Robots are being activated.")
-        return [
-            self.robots.append(Robot(self)) for r in range(config["FOOBARTORY_ROBOTS"])
-        ]
+
+        for r in range(config["FOOBARTORY_ROBOTS"]):
+            self.robots.append(Robot(self))
 
     def assign_activity(self, robot):
         if len(self.stock.foo) >= 6 and self.stock.euros >= 3:
@@ -41,6 +41,8 @@ class Foobartory:
         self.setup_robots()
 
         print(f"starting with {len(self.robots)} robots.")
+
+        print(len(self.robots))
 
         while len(self.robots) < 30:
             for robot in self.robots:

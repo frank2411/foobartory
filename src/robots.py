@@ -63,6 +63,10 @@ class Robot:
     @do_activity
     def buy_robot(self):
         print("Buying new robot")
+
+        print(len(self.factory.stock.foo))
         self.factory.stock.foo = self.factory.stock.foo[:-6]
+        print(len(self.factory.stock.foo))
+
         self.factory.stock.euros -= 3
         self.factory.robots.append(Robot(self.factory))
